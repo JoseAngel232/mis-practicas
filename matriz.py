@@ -1,27 +1,32 @@
-#CREACION DE MATRIZ DE 3X3
+import numpy as np
 
-matriz=[
-    [10,20,30],
-    [40,50,60],
-    [70,80,90]
-]
-#ACCESO A LOS ALEMENTOS: MATRIZ[FILA][COLUMA]
-print(matriz[1][2])#fila indie 1, columna indice 2
-#NODIFICAR ELEMENTOS
-matriz[0][0] = 100
-#RECORRER LA MATRIZ
-for fila in matriz:
-    for elemento in fila:
-        print(elemento, end=" ")
-    print()   
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
 
+# SUMA DE ELEMENTOS
+suma = A + B
+print("--SUMA A+B--")
+print(suma)
 
+# MULTIPLICACION DE ELEMENTOS
+prod_elem = A * B
+print("--MULTIPLICACION A*B--")
+print(prod_elem)
 
+# PRODUCTO MATRICIAL
+prod_mat = A @ B
+print("--PRODUCTO MATRICIAL--")
+print(prod_mat)
 
+# TRANSPUESTA
+transpuesta = A.T
+print("--TRANSPUESTA DE A--")
+print(transpuesta)
 
-#CREACION DE MATRICES
-A = [[1,2]],[[3,4]]
-B = [[5,6]],[[7,8]]
-
-suma = [[A[i][j] +B[i][j] for j in range(len(A[0]))] for i in range(len(A))]
-print (suma)
+# DETERMINANTE E INVERSA
+det = np.linalg.det(A)
+inv = np.linalg.inv(A)
+print("DETERMINANTE DE A")
+print(det)
+print("INVERSA DE A")
+print(inv)
